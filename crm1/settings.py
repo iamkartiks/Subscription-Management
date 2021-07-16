@@ -17,8 +17,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'cz=&%f*9(d*zo$_55p=(p)(eki#p$pb^0159-)8k^6$9c3l&_b'
-
+SECRET_KEY = 'django-insecure-=y)%%me&sbwnnw&gj%onxlqmdw$6d8-5yow1x6xvt3$rux!t7l'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -74,16 +73,6 @@ WSGI_APPLICATION = 'crm1.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 '''
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'iamkartiks',
-        'PASSWORD': 'Arianna22',
-        'HOST': 'crm-database.cinxne8xkonh.us-east-2.rds.amazonaws.com',
-        'PORT': '5432',
-    }
-}
 '''
 
 DATABASES = {
@@ -145,21 +134,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
 
 #SMTP CONFIGURATION
 
-EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-EMAIL_HOST = "smtp.gmail.com"
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = "kartikeysinha40@gmail.com"
-EMAIL_HOST_PASSWORD = "@Arianna22"
+
 
 
 #s3
-
-AWS_ACCESS_KEY_ID = 'AKIA4XLX633ZZRANLKOI'
-AWS_SECRET_ACCESS_KEY = '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'
-AWS_STORAGE_BUCKET_NAME = 'crm1bucket'
-
-AWS_S3_FILE_OVERWRITE = False
-AWS_DEFAULT_ACL = None
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
